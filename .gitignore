@@ -1,0 +1,19 @@
+/archive (4)
+/runs
+YOLOv8-Based-Waste-Detection-System-for-Recycling-Plants/*
+.qodo
+DATASET/
+.venv/
+.venv
+__pycache__
+*.pyc
+data/
+labels/
+Labelled dataset Recycling waste/
+drive-download-20240425T075510Z-001/
+.jpg
+.png
+waste_data
+waste_detection
+video/
+waste_detection-20240425T072355Z-001.zip

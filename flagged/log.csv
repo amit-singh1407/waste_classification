@@ -1,0 +1,2 @@
+Upload Image,Confidence Thresohld,Result,flag,username,timestamp
+,0.4,"{""path"":""flagged\\Result\\fd7a313d14bcf2d6bc24\\image.png"",""url"":""http://127.0.0.1:7860/file=C:\\Users\\ZAID\\AppData\\Local\\Temp\\gradio\\f88c7381facc23ca800c1f7eb84071e83b88928a\\image.png"",""size"":null,""orig_name"":""image.png"",""mime_type"":null,""is_stream"":false,""meta"":{""_type"":""gradio.FileData""}}",,,2024-05-06 01:13:29.961698
