@@ -14,6 +14,16 @@ drive-download-20240425T075510Z-001/
 .jpg
 .png
 waste_data
-waste_detection
+waste_detection/yolo/F1_curve.png
+waste_detection/yolo/PR_curve.png
+waste_detection/yolo/P_curve.png
+waste_detection/yolo/R_curve.png
+waste_detection/yolo/confusion_matrix.png
+waste_detection/yolo/confusion_matrix_normalized.png
+waste_detection/yolo/labels.jpg
+waste_detection/yolo/labels_correlogram.jpg
+waste_detection/yolo/train_batch*.jpg
+waste_detection/yolo/val_batch*.jpg
+waste_detection/yolo/events.out.tfevents.*
 video/
 waste_detection-20240425T072355Z-001.zip
