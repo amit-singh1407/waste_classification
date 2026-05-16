@@ -1,6 +1,5 @@
 import os
 import socket
-
 import gradio as gr
 from PIL import Image
 from ultralytics import YOLO
@@ -36,11 +35,9 @@ def image_inference(img_path, model_id, image_size, conf_threshold, iou_threshol
     iou_threshold: float, IoU threshold (its the minimum IoU score for a bounding box to be considered) [IoU = Intersection over Union]
     '''
     if model_id == 'best':
-        model_path = os.path.join('waste_detection', 'yolo', 'weights', 'best.pt')
+        model = YOLO(r'waste_detection\yolo\weights\best.pt')
     else:
-        model_path = os.path.join('waste_detection', 'yolo', 'weights', 'last.pt')
-    
-    model = YOLO(model_path)
+        model = YOLO(r'waste_detection\yolo\weights\last.pt')
     results = model.predict(
         source=img_path,
         conf=conf_threshold,
@@ -162,5 +159,4 @@ def create_app():
 
 
 if __name__ == "__main__":
-    demo = create_app()
-    demo.launch(server_name=get_launch_host(), server_port=get_launch_port())
+    create_app().launch(server_name=get_launch_host(), server_port=get_launch_port())
