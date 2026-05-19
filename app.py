@@ -162,4 +162,7 @@ demo = create_app()
 
 
 if __name__ == "__main__":
-    demo.launch(server_name=get_launch_host(), server_port=get_launch_port())
+    if os.environ.get("SPACE_ID"):
+        demo.launch(server_name="0.0.0.0", server_port=7860)
+    else:
+        demo.launch(server_name="127.0.0.1", server_port=7860, inbrowser=True)
