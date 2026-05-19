@@ -1,9 +1,6 @@
-import os
+from app import demo, get_launch_host, get_launch_port
 
-from ui_final import create_app, get_launch_host, get_launch_port
-
-app = create_app()
-demo = app
+app = demo
 
 
 if __name__ == "__main__":

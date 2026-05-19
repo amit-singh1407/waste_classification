@@ -35,9 +35,9 @@ def image_inference(img_path, model_id, image_size, conf_threshold, iou_threshol
     iou_threshold: float, IoU threshold (its the minimum IoU score for a bounding box to be considered) [IoU = Intersection over Union]
     '''
     if model_id == 'best':
-        model = YOLO(r'waste_detection\yolo\weights\best.pt')
+        model = YOLO("best.pt")
     else:
-        model = YOLO(r'waste_detection\yolo\weights\last.pt')
+        model = YOLO("last.pt")
     results = model.predict(
         source=img_path,
         conf=conf_threshold,
@@ -158,5 +158,8 @@ def create_app():
     return gradio_app
 
 
+demo = create_app()
+
+
 if __name__ == "__main__":
-    create_app().launch(server_name=get_launch_host(), server_port=get_launch_port())
+    demo.launch(server_name=get_launch_host(), server_port=get_launch_port())
